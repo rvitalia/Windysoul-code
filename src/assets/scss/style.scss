@@ -1,0 +1,36 @@
+@import 'blocks/vars';
+@import 'mixins';
+
+
+@import 'fonts';
+@import 'settings';
+
+
+html,body{
+  height: 100%;
+   color: white;
+   margin: 0;
+}
+
+.main{
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/samples';
+@import 'blocks/reviews';
+@import 'blocks/loveus';
+@import 'blocks/footer';
+
+
+
+
+
+
+

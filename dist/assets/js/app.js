@@ -1,1 +1,0 @@
-!function(){let e=document.querySelector(".header__line");addEventListener("scroll",()=>{300<window.scrollY?(e.classList.add("active"),setTimeout(()=>{e.style.transform="rotateX(0)"},300)):(e.style.transform="rotateX(90deg)",setTimeout(()=>{e.classList.remove("active")},300))})}();

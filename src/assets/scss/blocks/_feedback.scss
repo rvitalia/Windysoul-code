@@ -1,0 +1,128 @@
+.feedback {
+    @include bg-cover;
+    padding-top: clamp(40px, 9vw, 157px);
+    padding-bottom: clamp(40px, 9vw, 83px);
+}
+
+.feedback__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    column-gap: 60px;
+}
+
+.feedback__inner__item {
+
+    &:nth-child(1) {
+        padding-right: 30px;
+    }
+}
+
+.feedback__inner__item__title {
+    font-size: 71px;
+    font-weight: 100;
+    line-height: 1;
+    color: #F4FAFF;
+    padding-bottom: 41px;
+
+    & b,
+    & strong {
+        color: inherit;
+    }
+}
+
+.feedback__inner__item__subtitle {
+    display: block;
+    width: 100%;
+    max-width: 475px;
+    color: #F4FAFF;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.feedback__inner__item form .flex {
+    margin-top: 20px;
+    column-gap: 30px;
+    margin-bottom: 16px;
+}
+
+.feedback__inner__item__input {
+    width: 100%;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.10);
+    border: none;
+    font-size: 15px;
+    color: #F4FAFF;
+    font-weight: 700;
+    padding-left: 22px;
+
+    &::placeholder {
+        font-size: 15px;
+        color: #F4FAFF;
+        font-weight: 700;
+        // padding-left: 22px;
+
+    }
+}
+
+.big {
+    padding-top: 18px;
+    padding-left: 22px;
+    resize: none;
+    width: 100%;
+    max-width: 564px;
+    min-height: 188px;
+    margin-bottom: 16px;
+}
+
+.feedback__inner__item__submit {
+    color: #2E3032;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+    width: 100%;
+    max-width: 127px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.feedback__footer {
+    margin-top: 169px;
+    align-items: center;
+}
+
+.feedback__footer>.flex{
+    width: 100%;
+    max-width: 564px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feedback__footer__image {
+    max-width: 233px;
+    max-height: 45px;
+}
+.feedback__footer__copy {
+    color: #7B7E82;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    & a{
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+.feedback__footer__nav {
+    margin-top: 14px;
+    column-gap: 40px;
+   
+    &>li>a{
+        color: #FFF;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.52;
+    }
+}

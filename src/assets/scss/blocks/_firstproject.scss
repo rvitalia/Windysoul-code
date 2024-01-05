@@ -1,0 +1,37 @@
+.firstproject {
+    padding-top: clamp(40px, 9vw, 150px);
+}
+
+.firstproject__inner {
+    padding: 70px 88px 80px;
+    display: grid;
+    grid-template-columns: 172px 1fr;
+    grid-template-rows: 62px auto auto auto;
+    column-gap: 80px;
+}
+.firstproject__inner__img {
+    grid-row: 1/4;
+}
+.firstproject__inner__title {
+    grid-column: 2;
+}
+
+.firstproject__inner__subtitle {
+    padding-top: 13px;
+    grid-column: 2;
+    display: block;
+    margin-bottom: 27px;
+}
+.firstproject__inner__link {
+    grid-column: 2;
+    border: 1px solid #DEE4E9;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 54px;
+    width: 100%;
+    max-width: 224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

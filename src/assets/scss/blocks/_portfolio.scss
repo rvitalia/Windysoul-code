@@ -1,0 +1,15 @@
+.portfolio {
+    padding-top: clamp(40px, 9vw, 150px);
+}
+
+.portfolio__title {
+    max-width: 880px;
+    padding-bottom: 100px;
+}
+.portfolio__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 30px;
+}
+.portfolio__inner__item {
+}

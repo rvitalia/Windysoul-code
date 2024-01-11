@@ -1,13 +1,14 @@
 .reviews {
-    padding: clamp(30px, 5vw, 77px) 0;
 }
 
 .reviewes__inner {
+    padding: clamp(30px, 5vw, 77px) 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(483px,1fr));
     column-gap: 86px;
     padding-left: 90px;
     padding-right: 67px;
+    border: 1px solid #E0E7EA;
 }
 .reviewes__inner__title {
     display: flex;

@@ -44,7 +44,7 @@
 }
 .samples__inner__column__item__content__title {
     font-size: 34px;
-    font-weight: 300;
+    font-weight: 200;
     max-width: 465px;
     padding-bottom: 32px;
 }
@@ -59,4 +59,9 @@
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
+    border: 1px solid #DEE4E9;
+    padding: 18px 0;
+    width: 100%;
+    max-width: 213px;
+    margin: 0 auto;
 }

@@ -1,12 +1,15 @@
 .hero {
    height: 100vh;
-    @include bg-cover;
+   min-height: 800px;
+   
+   @include bg-cover;
 
-    & .container{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100vh;
+   & .container{
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       height: 100vh;
+       min-height: 800px;
     }
 }
 
@@ -15,16 +18,28 @@
 }
 
 .hero__inner {
+
+    & .embed-container{
+        max-height: 300px;
+    }
+    
+    & .embed-container iframe, & .embed-container object, & .embed-container embed {
+        max-height: 300px;
+    }
 }
 .hero__inner__title {
     font-size: 71px;
-    font-weight: 300;
+    font-weight: 100;
     line-height: 1;
     padding-bottom: 48px;
 
     & b{
-        font-weight: 700;
+        font-weight: 300;
         line-height: 1;
+    }
+
+    & strong{
+        font-weight: 700;
     }
 }
 .hero__inner__subtitle {

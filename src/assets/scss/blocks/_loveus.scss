@@ -143,9 +143,14 @@
     column-gap: 16.4px;
     
     @include maps{
-        width: 100%;
-        overflow-x: auto;
-        grid-template-columns: repeat(3, 300px);
+        // width: 100%;
+        // overflow-x: auto;
+        // grid-template-columns: repeat(3, 300px);
+
+        & .loveus__inner__items_image{
+            max-width: none;
+            max-height: none;
+        }
     }
 
     @include tablet{

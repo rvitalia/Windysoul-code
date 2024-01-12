@@ -6,6 +6,18 @@
     width: 100%;
     max-width: 410px;
 
+    @include for-desktop{
+        margin-bottom: clamp(40px, 10vw, 120px);
+    }
+
+    @include mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 11px;
+        margin-top: 40px;
+    }
+
     & li{
         border: 1px solid #D9E0E5;
         color: #8D9399;

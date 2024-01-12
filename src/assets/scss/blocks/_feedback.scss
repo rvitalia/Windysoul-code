@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     column-gap: 60px;
+
+    @include mobile{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
 }
 
 .feedback__inner__item {
@@ -28,6 +32,10 @@
     & strong {
         color: inherit;
     }
+
+    @include tablet{
+        font-size: 50px;
+    }
 }
 
 .feedback__inner__item__subtitle {
@@ -38,12 +46,22 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
+
+    @include for-desktop{
+        max-width: none;
+        margin-bottom: 40px;
+    }
 }
 
 .feedback__inner__item form .flex {
     margin-top: 20px;
     column-gap: 30px;
     margin-bottom: 16px;
+
+    @include mobile{
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
 
 .feedback__inner__item__input {
@@ -66,11 +84,12 @@
 }
 
 .big {
+    display: block;
     padding-top: 18px;
     padding-left: 22px;
     resize: none;
     width: 100%;
-    max-width: 564px;
+    // max-width: 564px;
     min-height: 188px;
     margin-bottom: 16px;
 }
@@ -89,7 +108,7 @@
 }
 
 .feedback__footer {
-    margin-top: 169px;
+    margin-top: clamp(80px, 15vw, 169px);
     align-items: center;
 }
 
@@ -118,6 +137,11 @@
 .feedback__footer__nav {
     margin-top: 14px;
     column-gap: 40px;
+
+    @include small-mobile{
+        column-gap: 15px;
+        flex-wrap: wrap;
+    }
    
     &>li>a{
         color: #FFF;

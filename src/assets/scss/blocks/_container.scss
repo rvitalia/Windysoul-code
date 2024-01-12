@@ -3,5 +3,10 @@
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 30px;
+
+    @include small-tablet{
+        padding: 0 15px;
+    }
 }
 
+  

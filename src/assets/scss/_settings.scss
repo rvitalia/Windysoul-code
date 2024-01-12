@@ -36,3 +36,24 @@ a {
     display: flex;
     align-items: center;
   }
+
+  #element {
+    scrollbar-width: thin;
+    scrollbar-color: #444444 #f9f9fd; /* Темно-серый ползунок и светло-серый фон */
+  }
+  
+  #element::-webkit-scrollbar {
+    width: 3px; /* Ширина скролла для WebKit (Chrome, Safari) */
+  }
+  
+  #element::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #444444; /* Цвет ползунка */
+  }
+  
+  #element::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f9f9fd; /* Цвет фона трека */
+  }
+  

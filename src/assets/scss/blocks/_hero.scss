@@ -4,6 +4,10 @@
    
    @include bg-cover;
 
+   @include tablet{
+    background-position: 65%;
+   }
+
    & .container{
        display: flex;
        align-items: center;
@@ -19,16 +23,9 @@
 
 .hero__inner {
 
-    & .embed-container{
-        max-height: 300px;
-    }
-    
-    & .embed-container iframe, & .embed-container object, & .embed-container embed {
-        max-height: 300px;
-    }
 }
-.hero__inner__title {
-    font-size: 71px;
+.hero__inner__title, .project__title {
+    font-size: clamp(50px, 10vw, 71px);
     font-weight: 100;
     line-height: 1;
     padding-bottom: 48px;
@@ -46,22 +43,35 @@
     width: 100%;
     max-width: 520px;
     color: #F4FAFF;
-    font-size: 20px;
+    font-size: clamp(16px , 4vw ,20px);
     font-weight: 300;
     line-height: 1.5;
     display: block;
     padding-bottom: 59px;
+
+    @include small-tablet{
+        max-width: none;
+    }
+
+    & b{
+        font-weight: inherit;
+
+        // @include small-tablet{
+        //     text-align: right;
+        //     display: block;
+        // }
+    }
 }
 
 .hero__inner__button {
     display: block;
-    max-width: 208px;
+    max-width: clamp(180px, 31vw ,208px);
     text-align: center;
     width: 100%;
     background: #FFF;
     min-height: 54px;
     color: #2E3032;
-    font-size: 15px;
+    font-size: clamp(14px, 4vw, 15px);
     font-weight: 700;
     
     display: flex;

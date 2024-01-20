@@ -9,17 +9,21 @@
     list-style-type: none;
     padding-inline-start: 105px;
 
-    @include tablet{
-        padding-inline-start: 35px;
-        list-style: decimal;
+    @include mobile {
+        padding-inline-start: 75px;
+    }
+
+    @include tablet {
+        // padding-inline-start: 35px;
+        // list-style: decimal;
         font-size: 34px;
         font-style: normal;
         font-weight: 200;
         line-height: normal;
-        font-family: 'Roboto Flex' ,serif;
+        font-family: 'Roboto Flex', serif;
 
-        &>li + li{
-            margin-top: 40px;
+        &>li+li {
+            padding-top: 40px;
         }
     }
 
@@ -46,37 +50,65 @@
         padding: 15px 20px;
         border: 1px solid #D9E0E5;
 
-        @include tablet{
-           display: none;
+        @include mobile {
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            top: 0;
+            left: -75px;
         }
     }
 
-    &>li:nth-child(1)::before {
-        content: '1';
-    }
-
-    &>li:nth-child(2)::before {
-        content: '2';
-        @include tablet{
-            margin-top: 40px;
+    &>li:nth-child(1) {
+        &::before {
+            content: '1';
         }
     }
 
-    &>li:nth-child(3)::before {
-        content: '3';
-        @include tablet{
-            margin-top: 40px;
+    &>li:nth-child(2) {
+        &::before {
+            content: '2';
+
+            @include tablet {
+                margin-top: 40px;
+            }
+        }
+
+        &::after{
+            @include mobile{
+                height: calc(100% - 40px);
+                top: 80px;
+            }
         }
     }
 
-    &>li:nth-child(4)::before {
-        content: '4';
-        @include tablet{
-            margin-top: 40px;
+    &>li:nth-child(3) {
+        &::before {
+            content: '3';
+
+            @include tablet {
+                margin-top: 40px;
+            }
+        }
+        &::after{
+            @include mobile{
+                height: calc(100% - 40px);
+                top: 80px;
+            }
         }
     }
 
-    &>li:after{
+    &>li:nth-child(4) {
+        &::before {
+            content: '4';
+
+            @include tablet {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &>li:after {
         content: "";
         height: calc(100% - 69px);
         width: 1px;
@@ -87,32 +119,37 @@
         z-index: 1;
         background: #D9E0E5;
 
-        @include tablet{
-            display: none;
+        @include mobile {
+            height: 100%;
+            left: calc(-75px + 20px);
+            top: 40px;
         }
     }
 
-    &>li:last-child::after{
+    &>li:last-child::after {
         display: none;
     }
 
     & li:nth-child(1) .loveus__inner__items>li {
         padding-bottom: 90px;
-        @include tablet{
+
+        @include tablet {
             padding-bottom: 40px;
         }
     }
 
     & li:nth-child(2) .loveus__inner__items>li {
         padding-bottom: 102px;
-        @include tablet{
+
+        @include tablet {
             padding-bottom: 40px;
         }
     }
 
     & li:nth-child(3) .loveus__inner__items>li {
         padding-bottom: 102px;
-        @include tablet{
+
+        @include tablet {
             padding-bottom: 40px;
         }
     }
@@ -122,6 +159,10 @@
     font-size: 34px;
     font-weight: 200;
     padding-bottom: 31px;
+
+    @include tablet{
+        padding-bottom: 15px;
+    }
 }
 
 .loveus__inner__subtitle {
@@ -132,7 +173,7 @@
     padding-bottom: 48px;
     width: 100%;
 
-    @include tablet{
+    @include tablet {
         margin-left: -30px;
     }
 }
@@ -141,22 +182,22 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 16.4px;
-    
-    @include maps{
+
+    @include maps {
         // width: 100%;
         // overflow-x: auto;
         // grid-template-columns: repeat(3, 300px);
 
-        & .loveus__inner__items_image{
+        & .loveus__inner__items_image {
             max-width: none;
             max-height: none;
         }
     }
 
-    @include tablet{
+    @include tablet {
         margin-left: -30px;
 
-        &>li{
+        &>li {
             padding-bottom: 15px;
         }
     }
@@ -170,6 +211,10 @@
 
     &+.loveus__inner__items__title {
         margin-top: 30px;
+
+        @include tablet{
+            margin-top: 10px;
+        }
     }
 
     & img {
@@ -183,15 +228,20 @@
     font-weight: 500;
     line-height: 152.9%;
     padding-bottom: 20px;
+
+    @include tablet{
+        padding-bottom: 10px;
+    }
 }
 
 .loveus__inner__items__subtitle {
+    display: block;
     font-size: 17px;
     font-weight: 300;
-    line-height: 152.9%;
+    line-height: 1.52;
 
-    @include tablet{
-        line-height: 1.1;
+    @include tablet {
+        line-height: 1.2;
     }
 }
 

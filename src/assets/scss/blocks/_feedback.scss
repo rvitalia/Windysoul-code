@@ -105,6 +105,10 @@
     max-width: 127px;
     cursor: pointer;
     text-align: center;
+
+    @include mobile{
+        max-width: none;
+    }
 }
 
 .feedback__footer {

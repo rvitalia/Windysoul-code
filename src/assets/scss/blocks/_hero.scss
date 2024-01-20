@@ -54,12 +54,12 @@
     }
 
     & b{
+        display: block;
         font-weight: inherit;
 
-        // @include small-tablet{
-        //     text-align: right;
-        //     display: block;
-        // }
+       @include mobile{
+        display: none;
+       }
     }
 }
 

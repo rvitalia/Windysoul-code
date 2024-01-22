@@ -53,6 +53,7 @@
 
     @include tablet{
         font-size: 45px;
+        text-align: center;
     }
 }
 .samples__inner__column {
@@ -73,7 +74,15 @@
         row-gap: 20px;
         flex-direction:  column-reverse;
         // row-gap: clamp(30px,6vw,114px);
-        align-items: flex-start;
+        align-items: center;
+
+        & .samples__inner__column__item__content__title{
+            text-align: center;
+        }
+
+        & .samples__inner__column__item__content__subtitle{
+            text-align: center;
+        }
     }
     @include small-tablet{
         column-gap: 30px;
@@ -91,27 +100,27 @@
         flex-direction:  column-reverse;
         // row-gap: clamp(30px,6vw,114px);
         row-gap: 20px;
-        align-items: flex-end;
+        align-items: center;
 
         @include tablet{
             & .samples__inner__column__item__content__title{
-                text-align: right;
+                text-align: center;
             }
 
             & .samples__inner__column__item__content__subtitle{
-                text-align: right;
+                text-align: center;
             }
         }
 
-        @include burger-header{
-            & .samples__inner__column__item__content__title{
-                text-align: left;
-            }
+        // @include burger-header{
+        //     & .samples__inner__column__item__content__title{
+        //         text-align: left;
+        //     }
 
-            & .samples__inner__column__item__content__subtitle{
-                text-align: left;
-            }
-        }
+        //     & .samples__inner__column__item__content__subtitle{
+        //         text-align: left;
+        //     }
+        // }
     }
     @include small-tablet{
         column-gap: 30px;

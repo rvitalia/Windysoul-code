@@ -57,8 +57,16 @@
         display: block;
         font-weight: inherit;
 
+       &:not(:last-child){
+           @include mobile{
+           display: none;
+          }
+       }
+
        @include mobile{
-        display: none;
+        .mobile__disabled{
+            display: none;
+        }
        }
     }
 }
